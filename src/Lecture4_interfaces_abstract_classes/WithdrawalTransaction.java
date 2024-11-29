@@ -42,4 +42,3 @@ public class WithdrawalTransaction extends BaseTransaction {
     Assignment 1 Q3: Write the Reverse method - a method unique to the WithdrawalTransaction Class
      */
 }
-

@@ -1,6 +1,5 @@
 package Lecture1_adt;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Calendar;
 /**
@@ -16,10 +15,14 @@ public class Transaction4 {
     private final int amount;
     private final Calendar date;
 
-    public Transaction4(int amount, @NotNull Calendar date) {
+    public Transaction4(int amount, Calendar date) {
+        if (date == null) {
+            throw new IllegalArgumentException("Date cannot be null");
+        }
         this.amount = amount;
-        this.date = (Calendar) date.clone();  // Defensive copying or Judicious Copying for Requires interfaces
+        this.date = (Calendar) date.clone();
     }
+    
 
     public int getAmount() {
         return amount; // Because we are dealing with Value types we need not worry about what we return
