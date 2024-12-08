@@ -27,7 +27,7 @@ public class BaseTransaction implements TransactionInterface {
     }
 
     public void printTransactionDetails() {
-        //Formart the date for printing 
+        
         SimpleDateFormat dateFormart = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String formattedDate = dateFormart.format(date.getTime());
 
