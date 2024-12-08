@@ -7,7 +7,7 @@ class WithdrawalTransaction extends BaseTransaction {
 
     public WithdrawalTransaction(double amount, Calendar date, String transactionID) {
         super(amount, date, transactionID);
-        this.amountNotWithdrawn = 0; // Initialize amount not withdrawn
+        this.amountNotWithdrawn = 0; 
     }
 
     @Override
