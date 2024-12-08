@@ -7,7 +7,7 @@ class DepositTransaction extends BaseTransaction {
 
         // Validate that the deposit amount is positive
         if (amount <= 0) {
-            throw new IllegalArgumentException("Deposit amount must be positive.");
+            throw new IllegalArgumentException("Insufficient amount for deposit into your account.");
         }
     }
 
@@ -17,9 +17,10 @@ class DepositTransaction extends BaseTransaction {
         System.out.println("Deposit successful: " + amount + ". Updated balance: " + ba.getBalance());
     }
 
-    // @Override
-    // public boolean reverse(BankAccount ba) {
-    //     System.out.println("Deposits are irreversible. Transaction ID: " + transactionID);
-    //     return false;
-    // }
+    @Override
+    public void printTransactionDetails() {
+        super.printTransactionDetails(); // Call the base class method
+        System.out.println("Transaction Type: Deposit");
+    }
+
 }

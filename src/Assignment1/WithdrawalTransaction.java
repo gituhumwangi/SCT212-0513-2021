@@ -38,4 +38,10 @@ class WithdrawalTransaction extends BaseTransaction {
             System.out.println("Transaction attempt completed. Current balance: " + ba.getBalance());
         }
     }
+
+    @Override
+    public void printTransactionDetails() {
+        super.printTransactionDetails(); // Call the base class method
+        System.out.println("Transaction Type: Withdrawal");
+    }
 }

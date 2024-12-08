@@ -11,6 +11,7 @@ public class Transaction1 {
     public int amount;
     public Calendar date;
 
+    //Constructor
     public Transaction1(int amount, Calendar date) {
         this.amount = amount;
         this.date = (Calendar) date.clone();
